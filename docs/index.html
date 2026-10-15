@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0876c9">
+  <meta name="description" content="肖光恒（OC），武汉科技大学计算机专业大二学生。关于我的运动、代码、项目，以及考研、留学与就业之间的未来探索。">
+  <title>肖光恒 OC · 关于我与我的未来</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="content.css">
+  <script defer src="sea.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body class="at-gate">
+  <main id="home">
+    <aside class="ocean" aria-label="字母组成的动态海洋，鱼儿在其中穿行">
+      <canvas id="sea" aria-hidden="true"></canvas>
+      <a class="ocean-brand" href="#about" aria-label="OC 首页">oc<span>®</span></a>
+      <div class="ocean-caption"><span class="eyebrow">A LITTLE WORLD OF OC</span><p>让好奇心，<br>自由游动。</p><span class="ocean-coordinate">WUST · COMPUTER SCIENCE · YEAR 02</span></div>
+      <div class="sea-hint"><span class="hint-dot"></span> 移动鼠标，拨动这片文字海</div>
+    </aside>
+    <div class="content">
+      <header class="topbar">
+        <nav aria-label="主要导航">
+          <a href="#about" class="active" aria-current="location">关于我</a>
+          <a href="#future">未来规划</a>
+          <a href="#club">俱乐部</a>
+          <a href="#explore">我的项目</a>
+        </nav>
+        <button id="replay" class="text-button">再来串门 <span>↗</span></button>
+      </header>
+      <section id="about" class="hero reveal">
+        <div class="eyebrow"><span class="status-dot"></span> ABOUT ME & MY FUTURE</div>
+        <h1>你好，<br>我是 <span class="name">肖光恒<span class="name-dot">.</span></span></h1>
+        <p class="hero-subtitle">也可以叫我 OC，欢迎游进我的小世界。</p>
+        <p class="intro">武汉科技大学 · 计算机专业 · 大二<br>喜欢运动，也喜欢探索有趣的事情。<br>把想法写成代码，把走过的弯路留在博客里。</p>
+        <div class="tags"><span>篮球 & 羽毛球</span><span>AI & Agent</span><span>算法与学习记录</span></div>
+        <div class="hero-actions"><a class="pill-button" href="https://xxoc.top" target="_blank" rel="noopener noreferrer">读读我的博客 <span>↗</span></a><a class="simple-link" href="https://github.com/Xiao-Guangheng" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a></div>
+        <a href="#profile" class="scroll-cue"><span>↓</span> 关于我，还有这些小事</a>
+      </section>
+      <section id="profile" class="section reveal" aria-labelledby="profile-title">
+        <div class="section-heading"><span class="eyebrow">01 / A LITTLE MORE ABOUT ME</span><span class="tiny">球场，也是一种充电方式</span></div>
+        <h2 id="profile-title">在球场上奔跑，<br>也在代码里探索。</h2>
+        <p class="section-intro">篮球和羽毛球是我比较擅长的运动。学习之外，我喜欢动起来；面对有趣的新事物，也总想亲手试一试。</p>
+        <dl class="profile-facts">
+          <div>
+            <dt>接触过的语言</dt>
+            <dd>C / C++ / Python / Java<p>都在学习和尝试中，希望通过实际项目，把“接触过”慢慢变成“能解决问题”。</p></dd>
+          </div>
+          <div>
+            <dt>一次比赛经历</dt>
+            <dd>亚太杯数学建模大赛 · 三等奖<p>大一时参加的比赛，也是我大学学习经历中的一个重要节点。</p></dd>
+          </div>
+          <div>
+            <dt>持续在做的事</dt>
+            <dd>维护自己的个人博客<p>记录算法题、AI 使用感想、报错排查和学习经验，把每一次尝试留下来。</p></dd>
+          </div>
+        </dl>
+      </section>
+      <section id="future" class="section reveal" aria-labelledby="future-title">
+        <div class="section-heading"><span class="eyebrow">02 / POSSIBLE FUTURES</span><span class="tiny">方向开放，行动具体</span></div>
+        <h2 id="future-title">未来不只一条路，<br>先让自己有选择。</h2>
+        <p class="section-intro">目前有考研的打算；如果有出国深造的机会，我也会积极争取。直接工作同样是一个可能的选择。我想用接下来的学习、进组尝试与实习，逐步判断适合自己的方向。</p>
+        <div class="direction-tabs" role="tablist" aria-label="了解我考虑的未来方向">
+          <button id="tab-study" class="direction-tab" type="button" role="tab" aria-selected="true" aria-controls="panel-study" tabindex="0">考研深造 <span>当前倾向</span></button>
+          <button id="tab-abroad" class="direction-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-abroad" tabindex="-1">出国学习</button>
+          <button id="tab-work" class="direction-tab" type="button" role="tab" aria-selected="false" aria-controls="panel-work" tabindex="-1">直接工作</button>
+        </div>
+        <div class="direction-panel" id="panel-study" role="tabpanel" aria-labelledby="tab-study" tabindex="0">
+          <span class="tiny">01 / KEEP LEARNING</span>
+          <h3>想把问题理解得更深一点。</h3>
+          <p>考研是目前倾向的方向。我希望给自己继续深入学习的机会，也想通过进组接触实际的研究任务，再判断自己是否适合长期深造。</p>
+          <p class="direction-goal"><strong>准备重点</strong> 巩固专业基础，了解研究方向和院校要求，用实际经历检验自己的兴趣。</p>
+        </div>
+        <div class="direction-panel" id="panel-abroad" role="tabpanel" aria-labelledby="tab-abroad" tabindex="0" hidden>
+          <span class="tiny">02 / A WIDER WORLD</span>
+          <h3>有机会，也想去更远的地方看看。</h3>
+          <p>我喜欢探索不同的可能性，出国学习也是其中之一。如果遇到合适的机会，希望接触不同的学习环境，再结合项目方向、申请条件和自身情况认真比较。</p>
+          <p class="direction-goal"><strong>准备重点</strong> 提升英语能力，了解申请要求与资助机会，逐步积累可以展示的学习和项目成果。</p>
+        </div>
+        <div class="direction-panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work" tabindex="0" hidden>
+          <span class="tiny">03 / BUILD SOMETHING REAL</span>
+          <h3>也愿意在真实的问题里成长。</h3>
+          <p>做出能运行、能使用的项目，对我很有吸引力。如果实习让我发现更适合自己的岗位和发展方式，直接工作也会是我认真考虑的选择。</p>
+          <p class="direction-goal"><strong>准备重点</strong> 打磨现有项目，积累开发与协作经验，通过实习了解岗位要求与自己的差距。</p>
+        </div>
+        <div class="roadmap-heading"><h3>先走好眼前的几步</h3><span class="tiny">MY NEXT STEPS</span></div>
+        <ol class="roadmap">
+          <li><span class="stage-label">现在 · 大二</span><h4>沉淀一段时间，磨练技能。</h4><p>巩固编程与算法基础，继续完善已有项目，把学习中的问题和收获整理成博客。</p></li>
+          <li><span class="stage-label">接下来的寒假</span><h4>争取进组，接触研究。</h4><p>了解感兴趣的课题组与招募要求，整理项目和比赛经历，主动争取参与机会。</p></li>
+          <li><span class="stage-label">接下来的暑假</span><h4>争取实习，走进真实开发。</h4><p>准备简历与项目展示，针对目标岗位补足基础、练习面试，并尝试投递实习。</p></li>
+          <li><span class="stage-label">此后 · 持续复盘</span><h4>用经历，重新校准方向。</h4><p>结合课程、进组尝试和实习反馈，比较考研、出国和就业的适合程度，再决定下一步。</p></li>
+        </ol>
+      </section>
+      <section id="club" class="section reveal" aria-labelledby="club-title">
+        <div class="section-heading"><span class="eyebrow">03 / GROW TOGETHER</span><span class="tiny">WHY THE JAVA CLUB</span></div>
+        <h2 id="club-title">想学到真本事，<br>也想成为一起做事的人。</h2>
+        <p class="section-intro">加入 Java 俱乐部，我希望学到真实、有用的技能。除了日常学习，我也想积极参加比赛与项目，在共同解决问题的过程中成长，为俱乐部的发展贡献自己的力量。</p>
+        <ol class="club-goals">
+          <li><span class="goal-number">01</span><div><h3>把 Java 用到实际开发中</h3><p>系统巩固 Java 基础，学习后端开发与调试，争取独立完成一个可以演示的项目功能，讲清楚它的实现思路。</p><span class="goal-outcome">希望做到 / 从写练习到完成实际功能</span></div></li>
+          <li><span class="goal-number">02</span><div><h3>参加项目，学会团队协作</h3><p>希望参与至少一个团队项目或比赛，承担明确任务；在实践中学习 Git 协作、沟通分工、代码交流和文档整理。</p><span class="goal-outcome">希望做到 / 完成自己负责的部分，并与团队交付成果</span></div></li>
+          <li><span class="goal-number">03</span><div><h3>分享经验，也为俱乐部出一份力</h3><p>把算法思路、AI 工具使用和排错过程整理成分享材料，参与技术交流，也积极承担自己力所能及的工作。</p><span class="goal-outcome">希望做到 / 留下一份能帮助他人的笔记或工具</span></div></li>
+        </ol>
+      </section>
+      <section id="explore" class="section reveal">
+        <div class="section-heading"><span class="eyebrow">04 / THINGS I'VE BUILT</span><span class="tiny">把好奇心变成小作品</span></div>
+        <h2>一些想法，<br>已经游出了脑海。</h2>
+        <p class="section-intro">从算法展示、交互相册，到 Skill 和浏览器插件。探索的方向不止一种，我希望每一次尝试都能留下具体的东西。</p>
+        <div class="work-grid">
+          <article class="work-card"><span class="work-symbol" aria-hidden="true">{ }</span><span class="tiny">01 / ALGORITHM</span><h3>算法可视化网站</h3><p>一个展示算法可视化的网站，把算法相关内容通过网页呈现出来。</p><span class="work-tag">算法 × Web</span></article>
+          <article class="work-card"><span class="work-symbol" aria-hidden="true">✳</span><span class="tiny">02 / INTERACTION</span><h3>Memory Tree 相册集</h3><p>一个围绕人机交互的相册集项目，尝试探索照片与交互体验的结合。</p><span class="work-tag">人机交互 × 相册</span></article>
+          <article class="work-card"><span class="work-symbol" aria-hidden="true">/</span><span class="tiny">03 / AI SKILLS</span><h3>一些 Skill 的开发</h3><p>尝试开发 Skill，探索 AI 工具的使用方式，把感兴趣的想法付诸实践。</p><span class="work-tag">AI × 工具探索</span></article>
+          <article class="work-card"><span class="work-symbol" aria-hidden="true">−</span><span class="tiny">04 / BROWSER TOOL</span><h3>DeepSeek 对话清理插件</h3><p>一个用于批量删除 DeepSeek 对话的浏览器插件，解决重复清理对话的需求。</p><span class="work-tag">浏览器插件 × 效率</span></article>
+        </div>
+        <a class="project project-blog" href="https://xxoc.top" target="_blank" rel="noopener noreferrer"><div class="project-art blog-art" aria-hidden="true"><span class="art-label">MR. OC'S BLOGGER</span><div class="paper"><span>随手写下，<br>认真生长。</span><i></i><i></i><i></i></div><span class="art-spark">✳</span></div><div class="project-copy"><div class="project-top"><span class="tiny">PERSONAL BLOG</span><span class="project-arrow">↗</span></div><h3>我的数字笔记本</h3><p>算法、NumPy、工具配置，以及那些终于想明白的瞬间。写下来，是另一种理解。</p><span class="project-url">xxoc.top</span></div></a>
+        <a class="github-row" href="https://github.com/Xiao-Guangheng" target="_blank" rel="noopener noreferrer"><span class="code-icon" aria-hidden="true">&lt;/&gt;</span><div><h3>更多代码，在 GitHub</h3><p>@Xiao-Guangheng</p></div><span>↗</span></a>
+      </section>
+      <section id="notes" class="section reveal">
+        <div class="section-heading"><span class="eyebrow">05 / LITTLE NOTES</span><span class="tiny">来自我的博客</span></div><h2>成长，藏在这些碎片里。</h2>
+        <p class="section-intro">今天的报错，也可能是明天的经验。</p>
+        <a class="note" href="https://xxoc.top/posts/deepseek_harness%E6%8F%92%E4%BB%B6%E6%95%99%E7%A8%8B/" target="_blank" rel="noopener noreferrer"><span class="note-index">01</span><div><span class="tiny">AI 工具 / 配置笔记</span><h3>Deepseek Harness 插件配置教程</h3></div><span>↗</span></a>
+        <a class="note" href="https://xxoc.top/posts/numpy/01-%E5%88%9B%E5%BB%BA%E6%95%B0%E7%BB%84/" target="_blank" rel="noopener noreferrer"><span class="note-index">02</span><div><span class="tiny">PYTHON / 学习记录</span><h3>NumPy：从创建数组开始</h3></div><span>↗</span></a>
+        <a class="note" href="https://xxoc.top/posts/%E6%9C%80%E5%A4%9A%E7%9A%84%E4%B8%8D%E9%87%8D%E5%8F%A0%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2/" target="_blank" rel="noopener noreferrer"><span class="note-index">03</span><div><span class="tiny">算法 / 解题思路</span><h3>最多的不重叠子字符串</h3></div><span>↗</span></a>
+        <a class="simple-link all-notes" href="https://xxoc.top" target="_blank" rel="noopener noreferrer">去博客翻翻更多碎片 <span>↗</span></a>
+      </section>
+      <section id="contact" class="section contact reveal">
+        <span class="eyebrow">06 / SAY HELLO</span>
+        <h2>有个想法？<br>一起聊聊吧。</h2>
+        <p>关于代码、AI、一场球，或者一个值得试试的小点子。</p>
+        <a id="email-address" class="email" href="mailto:guanghengxiao@gmail.com">guanghengxiao@gmail.com <span>↗</span></a>
+        <button id="copy-email" class="text-button">复制邮箱 <span>⧉</span></button>
+      </section>
+      <footer><span>© <span id="year">2026</span> 肖光恒 / OC · 保持好奇，保持生长。</span><button id="motion" class="text-button" aria-pressed="false">暂停海洋 <span>Ⅱ</span></button><button id="egg" class="egg" aria-label="发现一个小彩蛋">✦</button></footer>
+    </div>
+  </main>
+  <section id="gate" class="gate" aria-label="欢迎入口">
+    <div class="scene" id="scene"><div class="scene-bg"></div><div class="water-shimmer"></div><div class="sun-glow"></div><div class="ripples"><i></i><i></i><i></i></div>
+      <div class="door-shadow"></div><div class="door-reflection"></div>
+      <div class="portal"><div class="portal-inside"><span>HELLO<br>WORLD</span><i></i></div><div class="door-frame"></div><button class="door-leaf" id="door" aria-label="推开门，进入 OC 的个人主页"><span class="door-handle"></span></button><span class="door-ivy" aria-hidden="true">❧</span></div>
+      <div class="character-shadow"></div><div id="character" class="character" aria-hidden="true"><span class="character-pose pose-a"></span><span class="character-pose pose-b"></span></div>
+    </div>
+    <div class="gate-top"><span class="gate-brand">oc<span>®</span></span><span class="gate-edition">A SMALL DOOR TO A LITTLE WORLD</span><button id="skip" class="gate-skip">跳过开场 ↗</button></div>
+    <div class="gate-copy"><span class="eyebrow">SOMEWHERE BETWEEN CODE & CURIOSITY</span><h2>欢迎，来我的小世界。</h2><p>一扇门，一片海，还有一些正在生长的想法。</p></div>
+    <div class="gate-bottom"><span>WUST / COMPUTER SCIENCE</span><span>TAKE YOUR CURIOSITY WITH YOU.</span></div>
+  </section>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><style>#gate{display:none}#home{display:block;visibility:visible;opacity:1}.reveal{opacity:1;transform:none}body{overflow:auto}.direction-tabs{display:none}.direction-panel[hidden]{display:block}</style><div class="noscript">当前显示静态内容。开启 JavaScript 可体验开门动画、方向切换与文字海洋；也可以访问 <a href="https://xxoc.top">我的博客</a> 或 <a href="https://github.com/Xiao-Guangheng">GitHub</a>。</div></noscript>
+</body>
+</html>

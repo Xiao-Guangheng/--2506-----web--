@@ -1,0 +1,265 @@
+/* 正文与响应式布局；入口动画仍由 style.css 管理。 */
+.topbar {
+  height: auto;
+  min-height: 100px;
+  padding-block: 22px;
+  flex-wrap: wrap;
+}
+ 
+.topbar nav {
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.topbar nav a {
+  position: relative;
+  padding-block: 10px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.topbar nav a.active::after {
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 4.7vw, 74px);
+  letter-spacing: -2px;
+}
+
+.hero .name {
+  font-size: 1em;
+  letter-spacing: -2px;
+}
+
+.hero-subtitle {
+  font-size: clamp(17px, 1.5vw, 22px);
+  line-height: 1.9;
+}
+
+.intro, .section-intro, .project p, .contact p {
+  font-size: 15px;
+  line-height: 2;
+  color: #d5ebfa;
+}
+
+.tags span { font-size: 12px; }
+.profile-facts { margin: 30px 0 0; }
+
+.profile-facts > div {
+  padding: 23px 0;
+  border-top: 1px solid var(--line);
+}
+
+.profile-facts dt, .stage-label {
+  color: #a9e8dc;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.profile-facts dd {
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.profile-facts p, .direction-panel p, .roadmap p,
+.club-goals p, .work-card p {
+  margin: 0;
+  color: #d5ebfa;
+  font-size: 15px;
+  line-height: 1.95;
+}
+
+.profile-facts dd p { margin-top: 10px; }
+
+.direction-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 30px 0 14px;
+}
+
+.direction-tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 11px 16px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: transparent;
+  color: #d5ebfa;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: background .2s, color .2s;
+}
+
+.direction-tab span { font-size: 10px; opacity: .8; }
+
+.direction-tab[aria-selected="true"] {
+  background: #e9f7ff;
+  border-color: #e9f7ff;
+  color: #07588d;
+}
+
+.direction-panel {
+  padding: 27px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #c6ecff0c;
+}
+
+.direction-panel[hidden] { display: none; }
+
+.direction-panel h3 {
+  margin: 12px 0 15px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.direction-panel .direction-goal {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.direction-goal strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #a9e8dc;
+  font-weight: 500;
+}
+
+.roadmap-heading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 42px 0 25px;
+}
+
+.roadmap-heading h3 { margin: 0; font-size: 20px; font-weight: 500; }
+.roadmap { padding: 0; margin: 0 0 0 7px; list-style: none; }
+
+.roadmap li {
+  position: relative;
+  padding: 0 0 32px 26px;
+  border-left: 1px solid #c2ebfa55;
+}
+
+.roadmap li:last-child { padding-bottom: 0; border-color: transparent; }
+
+.roadmap li::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -5px;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #a9e8dc;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+.roadmap li:first-child::before { background: #a9e8dc; box-shadow: 0 0 16px #a9e8dc55; }
+.roadmap h4 { margin: 10px 0 8px; font-size: 18px; font-weight: 500; line-height: 1.7; }
+.club-goals { padding: 0; margin: 30px 0 0; list-style: none; }
+
+.club-goals li {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 27px 0;
+  border-top: 1px solid var(--line);
+}
+
+.goal-number { padding-top: 4px; color: #a9e8dc; font-size: 14px; }
+.club-goals h3 { margin: 0 0 10px; font-size: 20px; font-weight: 500; line-height: 1.6; }
+
+.goal-outcome {
+  display: block;
+  margin-top: 15px;
+  color: #b4f2e6;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 24px 21px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #c6ecff0a;
+}
+
+.work-symbol { min-height: 50px; margin-bottom: 18px; font-size: 37px; line-height: 1; color: #ade7dd; }
+.work-card h3 { margin: 13px 0 12px; font-size: 19px; line-height: 1.7; font-weight: 500; }
+.work-card p { font-size: 14px; }
+.work-tag { margin-top: auto; padding-top: 22px; color: #ade7dd; font-size: 11px; line-height: 1.8; }
+.github-row h3, .note h3 { font-size: 16px; }
+.github-row p { font-size: 12px; overflow-wrap: anywhere; }
+.note div { min-width: 0; }
+.email { font-size: clamp(15px, 1.5vw, 23px); }
+
+/* 复制和彩蛋的提示独立于入口，始终显示在视口底部。 */
+.toast {
+  position: fixed;
+  z-index: 40;
+  bottom: 28px;
+  left: 50%;
+  width: max-content;
+  max-width: 90vw;
+  padding: 14px 22px;
+  border-radius: 30px;
+  background: #eaf8ff;
+  color: #126599;
+  font-size: 13px;
+  line-height: 1.8;
+  box-shadow: 0 10px 35px #024f9b55;
+  text-align: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, 20px);
+  transition: opacity .3s, transform .3s;
+}
+
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (min-width: 701px) and (max-width: 1100px) {
+  .work-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+  .topbar { min-height: 90px; gap: 7px 15px; padding-block: 15px; }
+  .topbar nav { gap: 5px 16px; }
+  .topbar nav a { font-size: 12px; }
+  .hero h1 { font-size: clamp(39px, 8.6vw, 58px); }
+  .hero-subtitle { font-size: 17px; }
+  .direction-panel { padding: 23px 20px; }
+  .direction-tab { padding: 9px 13px; font-size: 13px; }
+  .club-goals li { gap: 15px; }
+}
+
+@media (max-width: 480px) {
+  .work-grid { grid-template-columns: 1fr; }
+  .hero-actions { flex-wrap: wrap; gap: 16px; }
+  .section-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+}
